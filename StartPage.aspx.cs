@@ -43,7 +43,7 @@ namespace StartPage
         {
             //creating session variables for name, min, and max
             Session["name"] = userName.Value;     //creating a session variable for name
-            Response.Redirect("default2.aspx");   //submitting the form to default2.aspx
+            Response.Redirect("page2.aspx");   //submitting the form to default2.aspx
         }
 
     }
