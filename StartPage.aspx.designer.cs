@@ -33,21 +33,12 @@ namespace StartPage
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Name;
 
         /// <summary>
-        /// Clear control.
+        /// submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Clear;
-
-        /// <summary>
-        /// Update control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Update;
+        protected global::System.Web.UI.WebControls.Button submit;
     }
 }

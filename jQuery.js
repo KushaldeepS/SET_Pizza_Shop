@@ -7,12 +7,18 @@
 // global variable - for use in jQuery (AJAX) calls
 var request; 
 var filename;
-
+let name = sessionStorage["name"];
+let firstName = sessionStorage["firstName"];
 //jquery activate only when ready
 //does the initial call to get the file list on document ready
 $(document).ready(function () { 
-    GetFiles();                                                 //getting the files names into the select 
+    //GetFiles();                                                 //getting the files names into the select 
 
+    //var selected = document.getElementsByName("topping").values;
+    //if (selected == "") {
+
+    //}
+    
     $('#dropdown').on('change', function () {                   //when the user select a file from the list 
         document.getElementById("txtBox").innerText = "";
         if (this.value) {
@@ -47,7 +53,7 @@ function GetFiles() {
     //jQuery AJAX call to GetFiles webmethod (code behind) for sending and receiving JSON
     request = $.ajax({
         type: "POST",
-        url: "Startpage.aspx/GetFiles",
+        url: "page2.aspx/calculateSUM",
         data: jsonString,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -57,7 +63,7 @@ function GetFiles() {
 
                 //we need to parse it to JSON 
                 response = $.parseJSON(data.d);
-
+                
                 //removing any previous files from the list so each time the user call this function thge file names do not get repeted.
                 $('#dropdown').empty().append($('<option selected disabled hidden> Select a file </option>', {
                     value: "empty", text: ""

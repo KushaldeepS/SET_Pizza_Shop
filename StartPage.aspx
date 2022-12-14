@@ -14,48 +14,10 @@
     <title style="font-size: 40px;">SET Pizza Shop</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type = "text/javascript" src = "jQuery.js"></script>
-    <style>
-        body {
-            background-attachment:fixed;
-            background-image:url(Image.jpg);
-            background-size:auto;
-        }
-        h3 {
-            text-align:center;
-            font-size: 40px; 
-            font-family:'Italic Outline Art'; 
-            font-style:italic;
-            font-weight:bold;
-            background-color:orange;
-            color:white;
-        }
-        div {
-            text-align:center;
-        }
-        span {
-            text-align:center;
-            color:white;
-            font-size:30px;
-            background-color:orange;
-        }
-        p {
-            text-align:center;
-            color:darkred;
-            font-size: 20px;
-        }
-        input {
-            vertical-align:bottom;
-            height:30px;
-            width: 400px;
-            font-size:20px;
-            background-color:orange;
-            color:white;
-        }
-        button {
-            height:30px;
-            width:80px;
-        }
-    </style>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+   
 </head>
 <body>
     
@@ -67,10 +29,11 @@
     <form  runat="server">
         <div>
              <!-- div container to ask user for their name and to process input-->
-            <span id="Message" name="Message">Please enter your first and last name -: </span><span>  </span>  
+            <span id="Message" name="Message">Please enter your first and last name -: </span><span>  </span> 
+            
             <input type="text" id="userName" name="userName" runat="server"/>
             <br /><br />
-            <p id="error" name="error" ></p>
+            
             <asp:RequiredFieldValidator
                   id="Name"
                   ControlToValidate="userName"
@@ -79,8 +42,8 @@
                   ErrorMessage="The field cannot be left blank, please enter your first and last name"
                   runat="server" /><br /><br />
             <br /><br />
-            <button id="Clear" runat ="server" type="reset">Clear</button>
-            <button id="Update" runat="server" type="button" onclick="Submit_Click()">Update</button>
+            <asp:Button runat="server" type="reset" name="clear" Text="Clear"/>
+            <asp:Button runat="server" id="submit" type="button" onclick="Submit_Click" Text="Submit"/>
             <br /><br />
         </div>
     </form>

@@ -39,10 +39,12 @@ namespace StartPage
         //	Inputs	:	object sender, EventArgs e
         //	Outputs	:	NONE
         //	Returns	:   void
-        protected void Submit_Click(object sender, EventArgs e)
+        public void Submit_Click(object sender, EventArgs e)
         {
             //creating session variables for name, min, and max
             Session["name"] = userName.Value;     //creating a session variable for name
+            string[] strings = userName.Value.Split(' ');
+            Session["firstName"] = strings[0];
             Response.Redirect("page2.aspx");   //submitting the form to default2.aspx
         }
 
