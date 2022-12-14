@@ -4,7 +4,7 @@
     FIRST VERSION : 12/08/2022
     DESCRIPTION :   the aspx file is to load the file contents that are sent from the server. and pass it to textbox area for editing
                     if the contents are changed prompt to save or neglect changes -->
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StartPage.aspx.cs" Inherits="StartPage.Default" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="page4.aspx.cs" Inherits="page4.Default" %>
 
 <!DOCTYPE html>
 
@@ -29,21 +29,9 @@
     <form  runat="server">
         <div>
              <!-- div container to ask user for their name and to process input-->
-            <span id="Message" name="Message">Please enter your first and last name -: </span><span>  </span> 
+            <span><%=Session["name"].ToString() %>, thank you for using SET Pizza Shop's services.</span><br /><br /><br />
+            <span id="final" name="final">Your order has been placed</span><span>  </span> 
             
-            <input type="text" id="userName" name="userName" runat="server"/>
-            <br /><br />
-            
-            <asp:RequiredFieldValidator
-                  id="Name"
-                  ControlToValidate="userName"
-                  display="Static"
-                  Forecolor="red"
-                  ErrorMessage="The field cannot be left blank, please enter your first and last name"
-                  runat="server" /><br /><br />
-            <br /><br />
-            <asp:Button runat="server" type="reset" name="clear" Text="Clear"/>
-            <asp:Button runat="server" id="submit" type="button" onclick="Submit_Click" Text="Submit"/>
             <br /><br />
         </div>
     </form>
