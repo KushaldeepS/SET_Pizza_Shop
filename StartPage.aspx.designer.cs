@@ -15,13 +15,22 @@ namespace StartPage
     {
 
         /// <summary>
-        /// save control.
+        /// userName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton save;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText userName;
+
+        /// <summary>
+        /// Name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Name;
 
         /// <summary>
         /// Clear control.

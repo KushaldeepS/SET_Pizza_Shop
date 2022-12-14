@@ -11,7 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <!-- title for the page --> 
-    <title style="font-size: 40px;">Text Editor</title>
+    <title style="font-size: 40px;">SET Pizza Shop</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type = "text/javascript" src = "jQuery.js"></script>
     <style>
@@ -20,35 +20,67 @@
             background-image:url(Image.jpg);
             background-size:auto;
         }
+        h3 {
+            text-align:center;
+            font-size: 40px; 
+            font-family:'Italic Outline Art'; 
+            font-style:italic;
+            font-weight:bold;
+            background-color:orange;
+            color:white;
+        }
+        div {
+            text-align:center;
+        }
+        span {
+            text-align:center;
+            color:white;
+            font-size:30px;
+            background-color:orange;
+        }
+        p {
+            text-align:center;
+            color:darkred;
+            font-size: 20px;
+        }
+        input {
+            vertical-align:bottom;
+            height:30px;
+            width: 400px;
+            font-size:20px;
+            background-color:orange;
+            color:white;
+        }
+        button {
+            height:30px;
+            width:80px;
+        }
     </style>
 </head>
-<body style>
+<body>
     
-    <h3 style="text-align:center">
-        <!-- header name for the game-->
-        <strong style="font-size: 40px;">Text Editor</strong>
+    <h3>
+        <!-- header name for the website-->
+        <strong>SET Pizza Shop</strong>
     </h3>
+    <br /><br /><br /><br />
     <form  runat="server">
-        <div  style="text-align:center">
+        <div>
              <!-- div container to ask user for their name and to process input-->
-            <span id="Message" name="Message" style="text-align:center;">Please Select a file from the drop-down list for editing -:      </span>
-           <select id="dropdown" name="dropdown">
-               
-           </select>
+            <span id="Message" name="Message">Please enter your first and last name -: </span><span>  </span>  
+            <input type="text" id="userName" name="userName" runat="server"/>
             <br /><br />
-            <div>
-                <div>
-                    <textarea id="txtBox" class="textbox" name="txtBox" style="height: 250px; width: 600px;"></textarea>
-                </div>
-                <div class="statusBar">
-                    <p id="statusMessage" class="statusBarText"></p>
-                </div>
-            </div>
-            <input type="text" id="saveFileTextbox" name="saveFileTextbox" style="height: 15px; width: 120px;" />
-            <button id="save" runat="server" type="button" onclick="saveAs()">SaveAs</button>
+            <p id="error" name="error" ></p>
+            <asp:RequiredFieldValidator
+                  id="Name"
+                  ControlToValidate="userName"
+                  display="Static"
+                  Forecolor="red"
+                  ErrorMessage="The field cannot be left blank, please enter your first and last name"
+                  runat="server" /><br /><br />
             <br /><br />
             <button id="Clear" runat ="server" type="reset">Clear</button>
-            <button id="Update" runat="server" type="button" onclick="saveFile()">Update</button>
+            <button id="Update" runat="server" type="button" onclick="Submit_Click()">Update</button>
             <br /><br />
         </div>
     </form>
