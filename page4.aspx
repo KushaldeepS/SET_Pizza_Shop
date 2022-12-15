@@ -1,9 +1,8 @@
-﻿<!--FILE :          StarPage.aspx
-    PROJECT :       PROG2001 - A-07 : JQUERY AND JSON BASED TEXT EDITOR
+﻿<!--/*  File    :   page4.aspx
+    PROJECT :       PROG2001 - final practical part
     PROGRAMMER :    Kushaldeep Singh, Yuvraj Singh
-    FIRST VERSION : 12/08/2022
-    DESCRIPTION :   the aspx file is to load the file contents that are sent from the server. and pass it to textbox area for editing
-                    if the contents are changed prompt to save or neglect changes -->
+    FIRST VERSION : 12/14/2022
+    DESCRIPTION :   the aspx file is to load the page content for user experience for ordering pizza*/-->
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="page4.aspx.cs" Inherits="page4.Default" %>
 
 <!DOCTYPE html>
@@ -30,7 +29,7 @@
         <div>
              <!-- div container to ask user for their name and to process input-->
             <span><%=Session["name"].ToString() %>, thank you for using SET Pizza Shop's services.</span><br /><br /><br />
-            <span id="final" name="final">Your order has been placed</span><span>  </span> 
+            <span id="final" name="final">Your order has been <%=Session["order"].ToString() %></span>
             
             <br /><br />
         </div>

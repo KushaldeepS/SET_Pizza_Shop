@@ -1,9 +1,8 @@
-﻿<!--FILE :          StarPage.aspx
-    PROJECT :       PROG2001 - A-07 : JQUERY AND JSON BASED TEXT EDITOR
+﻿<!--/*  File    :   StartPage.aspx
+    PROJECT :       PROG2001 - final practical part
     PROGRAMMER :    Kushaldeep Singh, Yuvraj Singh
-    FIRST VERSION : 12/08/2022
-    DESCRIPTION :   the aspx file is to load the file contents that are sent from the server. and pass it to textbox area for editing
-                    if the contents are changed prompt to save or neglect changes -->
+    FIRST VERSION : 12/14/2022
+    DESCRIPTION :   the aspx file is to load the page content for user experience for ordering pizza*/-->
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StartPage.aspx.cs" Inherits="StartPage.Default" %>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@
     <title style="font-size: 40px;">SET Pizza Shop</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type = "text/javascript" src = "jQuery.js"></script>
-
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
    

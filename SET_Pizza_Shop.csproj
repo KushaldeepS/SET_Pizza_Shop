@@ -73,6 +73,7 @@
     <Content Include="jQuery.js" />
     <Content Include="page2.aspx" />
     <Content Include="page4.aspx" />
+    <Content Include="page3.aspx" />
     <Content Include="StartPage.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="page4.aspx.designer.cs">
       <DependentUpon>page4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page3.aspx.cs">
+      <DependentUpon>page3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page3.aspx.designer.cs">
+      <DependentUpon>page3.aspx</DependentUpon>
     </Compile>
     <Compile Include="StartPage.aspx.cs">
       <DependentUpon>StartPage.aspx</DependentUpon>

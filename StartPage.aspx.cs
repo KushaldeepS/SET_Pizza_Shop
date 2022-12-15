@@ -1,9 +1,8 @@
-﻿/*  File            :   StarPage.aspx
-    PROJECT :       PROG2001 - A-07 : JQUERY AND JSON BASED TEXT EDITOR
+﻿/*  File        :   Startpage.aspx
+    PROJECT :       PROG2001 - final practical part
     PROGRAMMER :    Kushaldeep Singh, Yuvraj Singh
-    FIRST VERSION : 12/08/2022
-    DESCRIPTION :   the aspx file is to load the file contents that are sent from the server. and pass it to textbox area for editing
-                    if the contents are changed prompt to save or neglect changes*/
+    FIRST VERSION : 12/14/2022
+    DESCRIPTION :   the aspx file is to load the page content for user experience for ordering pizza*/
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

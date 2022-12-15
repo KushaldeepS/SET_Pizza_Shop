@@ -1,18 +1,19 @@
-﻿/*  File            :   StarPage.aspx
-    PROJECT :       PROG2001 - A-07 : JQUERY AND JSON BASED TEXT EDITOR
+﻿/*  File        :   page4.aspx
+    PROJECT :       PROG2001 - final practical part
     PROGRAMMER :    Kushaldeep Singh, Yuvraj Singh
-    FIRST VERSION : 12/08/2022
-    DESCRIPTION :   the aspx file is to load the file contents that are sent from the server. and pass it to textbox area for editing
-                    if the contents are changed prompt to save or neglect changes*/
+    FIRST VERSION : 12/14/2022
+    DESCRIPTION :   the aspx file is to load the page content for user experience for ordering pizza*/
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Web;
 using System.Web.Services;
 using System.Web.Services.Description;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace page4
@@ -29,9 +30,10 @@ namespace page4
         protected void Page_Load(object sender, EventArgs e)
         {
             //page load code 
-            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            
             
         }
+        
 
     }
 }
