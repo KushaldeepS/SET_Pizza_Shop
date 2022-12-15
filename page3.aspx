@@ -27,14 +27,16 @@
     <br /><br /><br />
     <form  runat="server" id="page3">
         <div>
+            <span>Ciao <%=Session["firstName"].ToString() %>! At the SET Pizza Shop You can only order one large Pizza</span><br /><br />
+
              <!-- div container to ask user for their name and to process input-->
-            <span><%=Session["firstName"].ToString() %>, Here is the summary of your order: </span>
+            <span><%=Session["firstName"].ToString() %>, Here is the summary of your order for your review: </span>
             
-            <br />
+            <br /><br /><br />
             <br /><br />
             
             <span>The total price for the pizza is  </span><span id="amount" name="amount"></span><br /><br /> 
-            <span>Your selected topping for the pizza: </span><span id="content" name="content"></span><br /><br /><br />
+            <span>Your selected topping for the pizza: </span><span id="content" name="content"></span><br /><br /><br /><br /><br /><br /><br /><br />
 
             <asp:Button runat="server" type="button" id="cancel" name="cancel" OnClick="Cancel_Click" Text="Cancel Order"/>
             <asp:Button runat="server" id="submit" type="button" onclick="Submit_Click" Text="Confirm Order"/>

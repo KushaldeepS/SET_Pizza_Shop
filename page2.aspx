@@ -30,7 +30,7 @@
    
     <!-- form element to submit the required information to next page -->
     <form runat="server" id="page2" name="page2">
-        <span>Ciao <%=Session["firstName"].ToString() %>, at the SET Pizza Shop You can only order one large Pizza</span><br /><br />
+        <span>Ciao <%=Session["firstName"].ToString() %>! At the SET Pizza Shop You can only order one large Pizza</span><br /><br />
 
         
         <span>The pizza comes with pizza sauce and cheese</span><br /><br />
